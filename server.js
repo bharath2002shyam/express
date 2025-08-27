@@ -5,7 +5,7 @@ const exhb=require("express-handlebars");
 const bodyparcer=require("body-parser")
 const dataBase=require("../express/db");
 const bookmodel=require('./models/bookmodel');
-const { log } = require("console");
+const PORT = process.env.PORT || 3000;
 
 dataBase();
 
@@ -115,6 +115,6 @@ if(req.query.del_id){
 })
 
 
-app.listen(8000,(req,res)=>{
-  console.log("hello listing to 8000 port")
+app.listen(PORT,(req,res)=>{
+  console.log(`hello listing to ${PORT} port`)
 })
