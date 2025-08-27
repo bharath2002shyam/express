@@ -3,7 +3,7 @@ const app = express();
 const path=require("path");
 const exhb=require("express-handlebars");
 const bodyparcer=require("body-parser")
-const dataBase=require("../express/db");
+const dataBase=require("./db");
 const bookmodel=require('./models/bookmodel');
 const PORT = process.env.PORT || 3000;
 
