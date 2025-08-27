@@ -3,7 +3,7 @@ const mongoose=require('mongoose');
 
 
 async function getData() {
-    mongoose.connect("mongodb://127.0.0.1:27017/books")
+    mongoose.connect("mongodb+srv://shyambharath50:jRAOVvXoPGbORXRY@bscluster.5xvth.mongodb.net/?retryWrites=true&w=majority&appName=BsCluster")
     .then(()=>{
         console.log("connected db")
     })
