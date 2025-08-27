@@ -1,9 +1,10 @@
 const mongoose=require('mongoose');
-
-
+const ev=require("dotenv")
+const path=require("path")
+ev.config({path:path.join(__dirname,"views","config.env")})
 
 async function getData() {
-    mongoose.connect("mongodb+srv://shyambharath50:jRAOVvXoPGbORXRY@bscluster.5xvth.mongodb.net/?retryWrites=true&w=majority&appName=BsCluster")
+    mongoose.connect(process.env.MONGO)
     .then(()=>{
         console.log("connected db")
     })

@@ -5,7 +5,10 @@ const exhb=require("express-handlebars");
 const bodyparcer=require("body-parser")
 const dataBase=require("./db");
 const bookmodel=require('./models/bookmodel');
-const PORT = process.env.PORT || 3000;
+const evnimt=require("dotenv")
+evnimt.config({path:path.join(__dirname,"views","config.env")})
+const PORT = process.env.PORT;
+
 
 dataBase();
 
